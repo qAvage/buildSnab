@@ -1,0 +1,50 @@
+.u-center-margin { margin: 0 auto !important; }
+
+.u-center-text { text-align: center !important; }
+
+.u-margin-bottom {
+  margin-bottom: 100px !important;
+
+  @include respond(small) {
+    margin-bottom: 80px !important;
+  }
+}
+
+.u-margin-top {
+  margin-top: 50px !important;
+
+  @include respond(small) {
+    margin-top: 40px !important;
+  }
+}
+
+.u-preload * {
+  $null-transition: none !important;
+
+  -webkit-transition: $null-transition;
+  -moz-transition: $null-transition;
+  -ms-transition: $null-transition;
+  -o-transition: $null-transition;
+  transition: $null-transition;
+}
+
+.u-horizontal-scroll {
+  @include respond(small) {
+    overflow-y: scroll;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding-right: 24px;
+    padding-left: 24px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.u-no-select {
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}

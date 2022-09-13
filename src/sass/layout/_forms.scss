@@ -1,0 +1,118 @@
+.main-form {
+  margin: 0 auto;
+  padding-top: 30px;
+  max-width: 770px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include respond(medium-sub) {
+    max-width: 450px;
+  }
+
+
+
+  div {
+    width: calc(33.3% - 15px);
+
+    @include respond(medium-sub) {
+      width: 100%;
+    }
+
+    &:nth-child(-n+2) {
+      input {
+        background-color: #F5F5F5;
+        text-indent: 40px;
+
+        &::placeholder {
+          color: #B1B1B1;
+        }
+      }
+    }
+
+    &:last-of-type {
+      margin-left: auto;
+    }
+
+    &:not(:nth-last-of-type(1)) {
+      margin-bottom: 15px;
+
+      input {
+        display: block;
+        padding: 17px 0;
+        width: 100%;
+        border: none;
+        border-radius: 7px;
+      }
+    }
+  }
+
+  .input-submit {
+    input {
+      background-color: $color-primary;
+      color: $color-white;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #DB7F36;
+      }
+    }
+  }
+
+}
+.input-politic {
+  display: flex;
+  justify-content: center;
+
+  a {
+    display: contents;
+    color: $color-primary;
+    
+    &:hover {
+      color: #DB7F36;
+    }
+  }
+
+  .custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .custom-checkbox+label {
+    display: inline-flex;
+    user-select: none;
+  }
+
+  .custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    margin-top: 3px;
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 2px;
+    background-color: #F2F2F2;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+  .custom-checkbox:checked+label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 9 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.88471 0.962662C7.02558 0.828551 7.21303 0.754409 7.40753 0.755881C7.60202 0.757352 7.78833 0.834323 7.92716 0.97055C8.06598 1.10678 8.14645 1.29161 8.15159 1.48604C8.15673 1.68047 8.08614 1.86929 7.95471 2.01266L3.96471 7.00266C3.8961 7.07656 3.81329 7.13586 3.72124 7.17703C3.62919 7.21819 3.52978 7.24037 3.42896 7.24224C3.32814 7.24411 3.22798 7.22562 3.13447 7.18789C3.04095 7.15017 2.95601 7.09397 2.88471 7.02266L0.238708 4.37666C0.165022 4.308 0.105919 4.2252 0.0649275 4.1332C0.0239355 4.0412 0.0018935 3.94189 0.00011672 3.84119C-0.00166006 3.74048 0.0168648 3.64045 0.0545858 3.54706C0.0923068 3.45368 0.148451 3.36884 0.21967 3.29762C0.290889 3.22641 0.375723 3.17026 0.469111 3.13254C0.562499 3.09482 0.662528 3.07629 0.763231 3.07807C0.863934 3.07985 0.963247 3.10189 1.05525 3.14288C1.14725 3.18387 1.23005 3.24298 1.29871 3.31666L3.39271 5.40966L6.86571 0.984663C6.87196 0.976963 6.87864 0.969618 6.88571 0.962662H6.88471Z' fill='%23FA913E'/%3E%3C/svg%3E%0A");
+    background-size: 70%;
+  }
+
+  label {
+    font-size: 14px;
+    line-height: 130%;
+    color: #767676;
+    cursor: pointer;
+
+    @include respond(small) {
+      font-size: 12px;
+    }
+  }
+}

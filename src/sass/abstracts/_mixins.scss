@@ -1,0 +1,42 @@
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 960px:    Tablet portrait
+960 - 1200px:   Tablet landscape
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == small-min {
+        @media only screen and (max-width: $bp-small-min) { @content };
+    }
+    @if $breakpoint == small-sub {
+        @media only screen and (max-width: $bp-small-sub) { @content };
+    }
+    @if $breakpoint == small {
+        @media only screen and (max-width: $bp-small) { @content };
+    }
+    @if $breakpoint == medium-sm {
+        @media only screen and (max-width: $bp-medium-sm) { @content };
+    }
+    @if $breakpoint == medium {
+        @media only screen and (max-width: $bp-medium) { @content };
+    }
+    @if $breakpoint == medium-sub {
+        @media only screen and (max-width: $bp-medium-sub) { @content };
+    }
+    @if $breakpoint == large {
+        @media only screen and (max-width: $bp-large) { @content };
+    }
+}
+
+
+@mixin gradient($n-img) {
+    &:nth-child(#{$n-img}) {
+        background-image: radial-gradient(circle at 0% 80%, #484848c9, transparent), url(/src/assets/img/services/services-#{$n-img}.jpg);
+    }
+    @include respond(small) {
+        &:nth-child(#{$n-img}) {
+            background-image: radial-gradient(circle at 0% 80%, #484848be, #484848be), url(/src/assets/img/services/services-#{$n-img}.jpg);
+        }
+    }
+}

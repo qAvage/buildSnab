@@ -1,0 +1,170 @@
+.footer {
+  padding: 70px 0;
+  background: linear-gradient(0deg, rgba(72, 72, 72, 0.9), rgba(72, 72, 72, 0.9)), url(/src/assets/img/bg/feedback-bg-2.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px 30px 0 0;
+
+  .top-footer {
+    display: flex;
+    padding-bottom: 70px;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-white;
+
+    @include respond(small-sub) {
+      flex-direction: column;
+    }
+
+    @include respond(small) {
+      padding: 0;
+    }
+
+    li {
+      padding-bottom: 15px;
+
+      a {
+        transition: all 0.3s;
+  
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  .title {
+    padding-bottom: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #979797;
+  }
+
+  .contact {
+    width: 25%;
+
+    @include respond(medium-sm) {
+      width: 33.3%;
+    }
+
+    li {
+      &:last-child {
+        max-width: 140px;
+      }
+    }
+
+    @include respond(small) {
+      width: 100%;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+    @include respond(medium-sm) {
+      width: 66.6%;
+    }
+
+    @include respond(small) {
+      width: 100%;
+    }
+
+    &-content {
+
+      li {
+        width: 33.3%;
+
+        @include respond(medium-sm) {
+          width: 50%;
+        }
+
+        @include respond(small) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .bottom-footer {
+    font-size: 12px;
+    color: #979797;
+
+    ul {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    li {
+      width: 25%;
+
+      @include respond(medium-sm) {
+        width: 33.3%;
+      }
+
+      @include respond(small) {
+        width: 50%;
+
+        &:first-child {
+          order: -2;
+        }
+
+        &:nth-child(2) {
+          padding-top: 26px;
+          width: 100%;
+        }
+
+        &:last-child {
+          order: -1;
+        }
+      }
+
+      @include respond(small-sub) {
+        width: 100%;
+
+        &:first-child {
+          padding-top: 30px;
+          order: -1;
+        }
+
+        &:last-child {
+          padding-top: 23px;
+          order: -2;
+        }
+      }
+
+      &:last-child {
+        margin-left: auto;
+      }
+
+      p {
+        
+        @include respond(medium-sub) {
+          max-width: 170px;
+        }
+
+        @include respond(small) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: $color-white;
+      transition: all .3s;
+
+      &:hover {
+        fill: $color-primary;
+      }
+
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+  }
+}

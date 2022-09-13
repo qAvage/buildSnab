@@ -1,0 +1,16 @@
+
+.container {
+  max-width: calc($container-width + 2 * $container-width-padding);
+  margin: 0 auto;
+
+  padding: 0 $container-width-padding;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include respond(small) {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,1230 @@
+// Common
+
+.section-description {
+  max-width: 368px;
+}
+
+// Section-services
+
+.services {
+  color: $color-white;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    
+    @include respond(small) {
+      width: calc(272px * 5 + 15px * 4);
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 368px;
+    border-radius: 7px;
+    padding: 36px 32px;
+    background-size: cover;
+    background-position: center;
+
+    @include gradient(1);
+    @include gradient(2);
+    @include gradient(3);
+    @include gradient(4);
+    @include gradient(5);
+
+    &:nth-child(-n+3) {
+      margin-bottom: 32px;
+      width: calc((100% - 32px * 2) / 3);
+    }
+    
+    &:not(:nth-child(2n+3)) {
+      margin-right: 32px;
+    }
+
+    &:nth-last-child(-n+2) {
+      width: calc((100% - 32px) / 2);
+    }
+
+    @include respond(medium) {
+    
+      &:not(:last-child) {
+        width: calc((100% - 32px) / 2);
+      }
+
+      &:not(:nth-last-child(2n+3)) {
+        margin-right: 0;
+      }
+      &:nth-last-child(2n+3) {
+        margin-right: 32px;
+      }
+
+      &:last-child {
+        width: 100%;
+      }
+    }
+
+    @include respond(small) {
+      justify-content: flex-start;
+      margin-bottom: 0 !important;
+      padding: 32px 20px;
+      height: 255px;
+      width: calc(100% - 15px * 4 / 5) !important;
+      
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
+
+
+    &:nth-last-child(-n+2) {
+      p {
+        width: 73%;
+      }
+
+      @include respond(small) {
+        p {
+          width: 100%;
+        }
+      }
+    }
+
+    @include respond(medium) {
+
+      &:not(:last-child) {
+        p {
+          width: 87%;
+        }
+      }
+
+      &:last-child {
+        p {
+          width: 50%;
+        }
+      }
+    }
+
+    @include respond(small) {
+      p {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+// Section-houses
+
+.houses {
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respond(small) {
+      width: calc(272px * 9 + 15px * 8);
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+
+    width: calc((100% - 32px * 2) / 3);
+
+    &:not(:nth-child(3n+3)) {
+      margin-right: 32px;
+
+      @include respond(medium) {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(-n+6) {
+      margin-bottom: 32px;
+    }
+
+    @include respond(medium) {
+      width: calc((100% - 32px) / 2);
+
+      &:nth-last-child(2n+3) {
+        margin-right: 32px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+
+    &-image {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 7px;
+
+      @include respond(small) {
+        height: 247px;
+      }
+    }
+
+    &-heading {
+      padding-top: 18px;
+
+      @include respond(small) {
+        padding-top: 15px;
+      }
+    }
+
+    &-hr {
+      margin-top: 20px;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &-cost {
+      padding-top: 18px;
+      padding-bottom: 30px;
+
+      @include respond(small) {
+        padding-top: 15px;
+        padding-bottom: 26px;
+      }
+    }
+
+    &-value {
+      padding-left: 10px;
+      color: $color-secondary;
+    }
+
+    &-btn {
+      max-width: 100%;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @include respond(small) {
+      margin-bottom: 0 !important;
+      width: calc(100% - 15px * 4 / 5) !important;
+      
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+// Section-feedback-primary
+.section-feedback-primary {
+  margin-top: 200px;
+  margin-bottom: 150px;
+
+  background-image:
+    linear-gradient(89.9deg, 
+    rgba(72, 72, 72, 0.9) 21.46%, 
+    rgba(72, 72, 72, 0) 118.04%), 
+    url(/src/assets/img/bg/feedback-bg.jpg);
+  background-size: cover;
+  background-position: center;
+
+  @include respond(large) {
+    margin-top: 150px;
+  }
+
+  @include respond(medium-sub) {
+    margin-top: 120px;
+    margin-bottom: 460px;
+  }
+
+  @include respond(small) {
+    margin-bottom: 340px;
+    background-image:
+    linear-gradient(0deg, 
+    rgba(72, 72, 72, 0.7) 100%, 
+    rgba(72, 72, 72, 0.7) 100%), 
+    url(/src/assets/img/bg/feedback-bg.jpg);
+  }
+}
+
+.feedback-primary {
+
+  &__content {
+    display: flex;
+    color: $color-white;
+
+    @include respond(medium-sub) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    padding: 100px 0;
+    width: 50%;
+    
+    @include respond(medium-sub) {
+      padding-bottom: 250px;
+      width: 100%;
+      
+      h2, p {
+        max-width: 440px;
+      }
+    }
+
+    @include respond(small) {
+      padding-top: 80px;
+      padding-bottom: 170px;
+    }
+
+    &-text {
+      padding-bottom: 8px;
+
+      @include respond(large) {
+        padding-bottom: 50px;
+      }
+
+      @include respond(small) {
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  &__phone {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+
+    @include respond(medium-sub) {
+      width: 100%;
+    }
+
+    @include respond(large) {
+      justify-content: center;
+    }
+
+    &_item {
+      position: absolute;
+      bottom: 50%;
+      transform: translateY(50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 132px 63px 80px 63px;
+      width: 365px;
+      height: 637px;
+      background: url(/src/assets/img/other/phone.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include respond(medium-sub) {
+        transform: scale(0.9) translateY(72%);
+      }
+
+      @include respond(small) {
+        padding-left: 70px;
+        padding-right: 70px;
+        transform: scale(0.6) translateY(100%);
+      }
+    }
+
+    &_title {
+      text-align: center;
+      font-size: 24px;
+      line-height: 29px;
+
+      @include respond(small) {
+        line-height: 33px;
+      }
+    }
+
+    &_icons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      svg {
+        &:first-child {
+          width: 26px;
+          height: 66px;
+        }
+
+        &:last-child {
+          width: 76px;
+          height: 76px;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+.section-features {
+  h2 {
+    padding-bottom: 50px;
+
+    @include respond(small) {
+      padding-bottom: 40px;
+      max-width: 250px;
+    }
+  }
+
+  .item {
+    width: calc((100% - 32px * 2) / 3);
+
+    &:nth-child(-n+3) {
+      margin-bottom: 32px;
+    }
+
+    &:not(:nth-child(3n+3)) {
+      margin-right: 32px;
+    }
+
+    &:nth-last-child(2) {
+      .text {
+        max-width: 250px;
+      }
+    }
+
+    @include respond(large) {
+      width: calc((100% - 32px) / 2);
+
+      &:not(:nth-child(3n+3)) {
+        margin-right: 0;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 32px;
+      }
+    }
+
+    @include respond(small) {
+      width: 100%;
+
+      &:not(:nth-child(3n+3)) {
+        margin-right: 0;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 32px;
+      }
+
+      &:nth-child(-n+6) {
+        margin-right: 0;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 26px;
+      }
+    }
+  }
+
+  .icon {
+    margin-bottom: 30px;
+    width: 100px;
+    height: 100px;
+
+    @include respond(large) {
+      margin-bottom: 15px;
+    }
+
+    @include respond(small) {
+      margin-bottom: 10px;
+    }
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+
+  .text {
+    line-height: 22px;
+
+    @include respond(small) {
+      max-width: 300px;
+    }
+  }
+}
+
+// About
+
+.section-about {
+  position: relative;
+  top: -10px;
+  background: 
+    linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)),
+    radial-gradient(
+      50% 50% at 50% 50%, 
+      rgba(255, 255, 255, 0) 0%,
+      #FFFFFF 100%), 
+    url(/src/assets/img/bg/about-bg.jpg);
+  background-position: center;
+  background-size: cover;
+
+  h2 {
+    padding-bottom: 50px;
+  }
+
+  @include respond(small) {
+    background: none;
+  }
+
+  .about {
+    display: flex;
+
+    & div {
+      width: 50%;
+
+      @include respond(medium-sub) {
+        width: 100%;
+      }
+    }
+
+    @include respond(medium-sub) {
+      flex-direction: column;
+    }
+  }
+
+
+
+  .text {
+    padding-right: 32px;
+
+    p {
+      line-height: 22.4px;
+
+      &:first-child {
+        padding-bottom: 25px;
+      }
+    }
+
+    @include respond(medium-sub) {
+      padding-top: 26px;
+      padding-right: 0;
+      order: 1;
+    }
+  }
+
+  .image {
+    img {
+      width: 100%;
+      border-radius: 7px;
+      object-fit: cover;
+      object-position: right;
+
+      @include respond(small) {
+        height: 100%;
+      }
+    }
+
+    h3 {
+      padding: 15px 0 5px 0;
+      font-size: 20px;
+      font-weight: 600;
+
+      @include respond(medium) {
+        font-size: 18px;
+      }
+
+      @include respond(small) {
+        font-size: 14px;
+      }
+    }
+
+    span {
+      font-size: 16px;
+    }
+  }
+
+  .counter {
+    justify-content: space-between;
+    padding-top: 30px;
+
+    .item {
+      max-width: calc((100% - 128px * 3) / 4);
+
+      span {
+        font-size: 50px;
+        font-weight: 500;
+        color: $color-primary;
+
+        @include respond(small) {
+          font-size: 40px;
+        }
+      }
+
+      p {
+        padding-top: 15px;
+        font-size: 18px;
+        line-height: 120%;
+
+        @include respond(small) {
+          font-size: 14px;
+        }
+      }
+
+      @include respond(large) {
+        max-width: calc((100% - 62px * 3) / 4);
+      }
+
+      @include respond(medium) {
+        max-width: calc((100% - 40px * 3) / 4);
+      }
+
+      @include respond(medium-sub) {
+        max-width: calc((100% - 62px) / 2);
+
+        &:nth-child(-n+2) {
+          padding-bottom: 26px;
+        }
+      }
+
+      @include respond(small) {
+        max-width: 272px;
+
+        &:not(:last-child) {
+          padding-bottom: 26px;
+        }
+      }
+    }
+  }
+}
+
+// Stages
+
+.section-stages {
+  h2 {
+    padding-bottom: 50px;
+    max-width: 568px;
+    
+    @include respond(small) {
+      padding-bottom: 40px;
+      max-width: 400px;
+    }
+  }
+
+  .stages {
+    justify-content: space-between;
+  }
+
+  .item {
+    padding: 34px 20px 25px;
+    max-width: calc((100% - 32px * 3) / 4);
+    border-radius: 7px;
+    background-color: #F5F5F5;
+
+    @include respond(large) {
+      max-width: calc(50% - 16px);
+      padding-right: 40px;
+      padding-bottom: 34px;
+
+      &:nth-child(-n+2) {
+        margin-bottom: 32px;
+      }
+    }
+
+    @include respond(small) {
+      padding: 25px;
+      max-width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 22px;
+      }
+    }
+
+    svg {
+      width: 50px;
+      height: 56px;
+    }
+
+    h3 {
+      padding: 15px 0 10px 0;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 140%;
+
+      @include respond(small) {
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+// Feedback-secondary
+
+.section-feedback-secondary {
+  background-image:
+    linear-gradient(89.9deg, 
+    rgba(72, 72, 72, 0.9) 21.46%, 
+    rgba(72, 72, 72, 0) 118.04%), 
+    url(/src/assets/img/bg/feedback-bg-2.jpg);
+  background-size: cover;
+  background-position: center;  
+
+  @include respond(medium-sub) {
+    background-image:
+    linear-gradient(0deg, 
+    rgba(72, 72, 72, 0.7) 100%, 
+    rgba(72, 72, 72, 0.7) 100%), 
+    url(/src/assets/img/bg/feedback-bg-2.jpg);
+  }
+
+  .feedback {
+    display: flex;
+
+    & > div {
+      width: 50%;
+
+      @include respond(medium-sub) {
+        width: 100%;
+      }
+    }
+
+    @include respond(medium-sub) {
+      flex-direction: column;
+    }
+  }
+
+  .title {
+    padding: 90px 0;
+    color: $color-white;
+
+    @include respond(medium-sub) {
+      padding-bottom: 40px;
+    }
+
+    h2 {
+      max-width: 400px;
+
+      @include respond(medium-sub) {
+        max-width: 320px;
+      }
+    }
+
+    p {
+      padding: 20px 0;
+
+      @include respond(medium-sub) {
+        max-width: 450px;
+      }
+    }
+  }
+
+  .estimator {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    @include respond(medium-sub) {
+      justify-content: center;
+    }
+
+    .image {
+      position: absolute;
+      bottom: 0;
+
+      @include respond(medium) {
+        max-width: 416px;
+      }
+
+      @include respond(medium-sub) {
+        position: static;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+
+      @include respond(medium) {
+      }
+    }
+  }
+}
+
+// Gallery
+
+.section-gallery {
+
+  .gallery-top {
+    padding-bottom: 32px;
+
+    @include respond(large) {
+      padding-bottom: 56px;
+    }
+
+    @include respond(small) {
+      padding-bottom: 32px;
+    }
+
+    .title {
+      width: 50%;
+
+      h2 {
+        max-width: 90%;
+      }
+
+      @include respond(medium-sub) {
+        padding-bottom: 40px;
+        width: 100%;
+      }
+    }
+
+    .description {
+      width: 27%;
+
+      p {
+        font-size: 20px;
+        line-height: 140%;
+
+        @include respond(large) {
+          max-width: 80%;
+          font-size: 14px;
+        }
+
+        @include respond(medium-sub) {
+          max-width: 320px;
+        }
+      }
+
+      @include respond(medium-sub) {
+        padding-bottom: 15px;
+        width: 80%;
+      }
+    }
+
+    .gallery-button {
+      display: flex;
+      justify-content: flex-end;
+      width: 23%;
+
+      @include respond(medium-sub) {
+        justify-content: flex-start;
+      }
+
+      .button {
+        position: relative;
+        width: 200px;
+
+        @include respond(large) {
+          width: 100%;
+        }
+        @include respond(medium-sub) {
+          max-width: 368px;
+        }
+      }
+
+      svg {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        transform: translate(-50%, 25%);
+
+        @include respond(medium-sub) {
+          top: -100%;
+          right: 0;
+          transform: translate(0);
+        }
+      }
+
+      .btn-primary {
+        padding: 23px 0;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      @include respond(medium-sub) {
+        width: 100%;
+      }
+    }
+  }
+
+  .slider-wrapper {
+    position: relative;
+  }
+  
+  .gallery-slider {
+
+    .slider-item {
+      padding: 0 16px;
+    }
+    .slick-slide {
+      opacity: 0.4;
+      transition: all 0.5s ease;
+
+      @include respond(large) {
+        opacity: 1;
+      }
+      &.slick-center {
+        opacity: 1;
+
+        img {
+          border-radius: 7px;
+          filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+        }
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+
+    @include respond(large) {
+      width: calc(100vw - 48px);
+      height: auto;
+    }
+
+    @include respond(small) {
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  .custom-dots {
+    display: flex;
+    justify-content: center;
+    height: 0;
+
+    .slick-dots {
+      transform: translateY(-35px);
+
+      @include respond(small) {
+        transform: translateY(-25px);
+      }
+
+      .slick-active {
+        background-color: $color-primary;
+      }
+  
+      & li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #F5F5F5;
+        transition: all 0.4s ease;
+
+        @include respond(small) {
+          width: 7px;
+          height: 7px;
+        }
+  
+        &:hover {
+          background-color: $color-primary;
+        }
+  
+        &:not(:last-child) {
+          margin-right: 10px;
+
+          @include respond(small) {
+            margin-right: 7px;
+          }
+        }
+  
+        button {
+          background-color: transparent;
+          color: transparent;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .custom-arrows {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    max-width: 1168px;
+    margin: 0 auto;
+
+    @include respond(large) {
+      padding: 0 55px;
+    }
+
+    @include respond(medium-sub) {
+      padding: 0 40px;
+    }
+
+    .wrap-arrow {
+      width: 60px;
+
+      @include respond(medium-sub) {
+        width: 25px;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+
+      @include respond(medium-sub) {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    .prev-arrow {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
+
+// Reviews
+
+.section-reviews {
+  position: relative;
+
+  @include respond(large) {
+    overflow: hidden;
+  }
+
+  h2 {
+    padding-bottom: 50px;
+  }
+
+  .item {
+    padding: 40px 30px;
+    height: 100%;
+    background-color: #F5F5F5;
+    color: #363636;
+    border-radius: 7px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
+    
+
+    @include respond(small) {
+      padding: 28px 26px;
+    }
+
+    @include respond(small-min) {
+      height: auto;
+    }
+  }
+
+  .review-header {
+    display: flex;
+    padding-bottom: 28px;
+
+    @include respond(small) {
+      flex-direction: column;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 20px;
+
+      @include respond(small) {
+        padding-top: 20px;
+        padding-left: 0;
+      }
+    }
+
+    .name {
+      padding-bottom: 7px;
+    }
+
+    .social {
+      font-size: 14px;
+
+      @include respond(small) {
+      font-size: 12px;
+      }
+    }
+  }
+
+  .text {
+    line-height: 150%;
+  }
+
+  .reviews {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    @include respond(large) {
+      width: 1200px;
+    }
+
+    @include respond(small) {
+      width: 850px;
+    }
+
+    @include respond(small-min) {
+      width: 100%;
+    }
+  }
+
+  .reviews-slider {
+
+    .slick-slide {
+      margin: 0 16px;
+      height: auto;
+
+      & > div {
+        height: 100%;
+
+        @include respond(small-min) {
+          height: auto;
+        }
+      }
+    }
+
+    .slick-track {
+      display: flex !important;
+      margin: -15px 0;
+      padding: 15px 0;
+
+      @include respond(large) {
+        position: relative;
+        left: 8px;
+      }
+      @include respond(small-min) {
+        display: block !important;
+        left: auto;
+      }
+    }
+
+    .slick-list {
+      margin: -15px 0;
+      padding: 15px 0;
+    }
+  }
+
+  .custom-arrows {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1368px;
+
+    @include respond(large) {
+      justify-content: center;
+      padding-top: 32px;
+    }
+
+    .wrap-arrow {
+      width: 48px;
+
+      @include respond(large) {
+        width: 26px;
+      }
+
+      &:first-child {
+
+        @include respond(large) {
+          padding-right: 60px;
+        }
+
+        @include respond(small) {
+          padding-right: 40px;
+        }
+      }
+
+      &:last-child {
+
+        @include respond(large) {
+          padding-left: 60px;
+        }
+
+        @include respond(small) {
+          padding-left: 40px;
+        }
+      }
+    }
+
+    svg {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 50%;
+      transform: translateY(50%);
+      cursor: pointer;
+      
+      @include respond(large) {
+        position: static;
+        width: 26px;
+        height: 26px;
+        transform: translate(0);
+      }
+    }
+
+    .prev-arrow-review {
+      transform: translateY(50%) rotate(180deg);
+      
+      @include respond(large) {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+// Section map
+
+.section-map {
+
+  .title {
+    padding-bottom: 50px;
+
+    h2 {
+      max-width: 580px;
+
+      @include respond(small) {
+        max-width: 300px;
+      }
+    }
+
+    @include respond(small) {
+      padding-bottom: 40px;
+    }
+  }
+
+  .map {
+    width: 100%;
+    height: 700px;
+
+    @include respond(small) {
+      height: 500px;
+    }
+  }
+}
+
+// Section questions
+
+.section-questions {
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+      max-width: 320px;
+
+      @include respond(small) {
+        max-width: 250px;
+      }
+    }
+
+    p {
+      max-width: 650px;
+      line-height: 160%;
+
+      @include respond(small) {
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+
+

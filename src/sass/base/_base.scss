@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-white;
+}
+
+
+
+#form-test {
+  margin: 300px;
+
+  input {
+    border: 1px solid burlywood;
+  }
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}

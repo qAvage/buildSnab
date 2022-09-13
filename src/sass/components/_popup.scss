@@ -1,0 +1,333 @@
+.mfp-bg {
+  background: #0b0b0b77 !important;
+}
+
+// House-popup
+
+.house-popup {
+  position: relative;
+  background: #FFF;
+  padding: 40px 116px 40px 24px;
+  max-width: 960px;
+  margin: 20px auto;
+  border-radius: 20px;
+
+  @include respond(small) {
+    padding: 70px 24px 40px 24px;
+    margin: 50px auto;
+  }
+
+  img {
+    margin-bottom: 40px;
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 7px;
+
+    @include respond(small) {
+      height: auto;
+    }
+  }
+
+  .title {
+    padding-bottom: 17px;
+    color: #484848;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  span {
+    color: #22C129;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .btn-popup {
+    margin: 30px 0 50px 0;
+  }
+
+  .description {
+
+    p {
+      color: #919191;
+
+      &:not(:last-child) {
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+// Popup-form
+
+.popup-form {
+  position: relative;
+  background: $color-white;
+  padding: 70px;
+  max-width: 644px;
+  margin: 20px auto;
+  border-radius: 20px;
+
+  @include respond(small) {
+    padding: 40px;
+  }
+
+  h3 {
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  .sub-form {
+
+    .input-file {
+      padding-bottom: 40px;
+
+      .label-wrap {
+        display: flex;
+        position: relative;
+        align-items: center;
+        cursor: pointer;
+
+        label {
+          padding: 10px 0 10px 30px;
+          color: $color-primary;
+          text-decoration: underline;
+          cursor: pointer;
+          z-index: 2;
+        }
+
+        svg {
+          position: absolute;
+          width: 13px;
+          height: 32px;
+          fill: $color-primary;
+          transition: all 0.4s ease;
+          z-index: 1;
+        }
+
+        &:hover {
+
+          svg, label {
+            color: #DB7F36;
+            fill: #DB7F36;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .custom-file-input {
+        display: none;
+      }
+    }
+
+    .input-text {
+      padding-bottom: 20px;
+      
+      input {
+        padding: 20px 0;
+      }
+
+      textarea {
+        padding-top: 25px;
+        height: 200px;
+        resize: none;
+      }
+
+      input, textarea {
+        width: 100%;
+        background-color: #F5F5F5;
+        text-indent: 33px;
+        font-size: 18px;
+        border-radius: 7px;
+
+        @include respond(medium) {
+          font-size: 15px;
+        }
+
+        &::placeholder {
+          color: #B1B1B1;
+        }
+      }
+    }
+
+    .input-submit {
+      max-width: 368px;
+      margin: 0 auto 15px auto;
+
+      input {
+        display: block;
+        padding: 20px 0;
+        width: 100%;
+        background-color: $color-primary;
+        color: $color-white;
+        font-weight: 500;
+        border-radius: 7px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #DB7F36;
+        }
+      }
+    }
+
+    .input-politic {
+      label {
+        max-width: 250px;
+      }
+    }
+  }
+}
+
+// Success-popup
+
+.success-popup {
+  position: relative;
+  background: $color-white;
+  padding: 50px 70px;
+  max-width: 480px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 6px 1px 35px rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+
+  @include respond(small) {
+    padding: 30px;
+    max-width: 325px;
+  }
+
+  svg {
+    width: 92px;
+    height: 92px;
+    
+    @include respond(small) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.popup-title-sm {
+  font-size: 25px;
+
+  @include respond(small) {
+    font-size: 20px;
+  }
+}
+
+.popup-txt-sm {
+  font-size: 18px;
+  padding: 10px 0 20px 0;
+
+  @include respond(small) {
+    font-size: 14px;
+  }
+}
+
+// Choice popup
+
+.choice-popup {
+  position: relative;
+  background: $color-white;
+  padding: 50px 70px;
+  max-width: 645px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 6px 1px 35px rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+  z-index: 60;
+
+  @include respond(small) {
+    padding: 25px;
+  }
+
+  .choice-btns {
+    display: flex;
+    justify-content: space-evenly;
+
+    @include respond(small) {
+      flex-direction: column;
+      max-width: 250px;
+      margin: 0 auto;
+    }
+
+    .choice-btn {
+      display: block;
+      padding: 20px 50px;
+      color: $color-white;
+      background-color: $color-primary;
+      border: none;
+      border-radius: 7px;
+      transition: all 0.3s ease;
+
+      &:first-child {
+        @include respond(small) {
+          margin-bottom: 15px;
+        }
+      }
+
+      &:hover {
+        background-color: #DB7F36;
+      }
+    }
+  }
+}
+
+
+// Util
+
+@include respond(medium) {
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+  body.mfp-active {
+    overflow: hidden;
+    -webkit-overflow-scrolling: auto;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+  }
+  body .mfp-wrap {
+    position: fixed;
+    overflow: auto;
+    top: 0 !important;
+  }
+}
+
+
+
+// Animate popup
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}

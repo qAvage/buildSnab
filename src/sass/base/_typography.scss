@@ -1,0 +1,109 @@
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  color: $color-text;
+
+  @include respond(small) {
+    font-size: 14px;
+  }
+}
+
+.header {
+  color: $color-white;
+}
+
+.header-top {
+
+  &__phone-number {
+    font-size: 18px;
+  }
+
+  &__info {
+    font-size: 12px;
+  }
+}
+
+.header-bottom {
+  font-family: $font-secondary;
+
+  @include respond(large) {
+    font-size: 15px;
+  }
+}
+
+.heading-title {
+  font-size: 50px;
+  font-weight: 600;
+
+  @include respond(large) {
+    font-size: 30px;
+  }
+  
+  @include respond(small) {
+    font-size: 22px;
+  }
+}
+
+.heading-description {
+  font-size: 24px;
+  font-weight: 400;
+
+  @include respond(large) {
+    font-size: 20px;
+  }
+
+  @include respond(small) {
+    font-size: 16px;
+  }
+}
+
+.heading-primary {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 120%;
+
+  @include respond(large) {
+    font-size: 24px;
+  }
+
+  @include respond(small) {
+    font-size: 20px;
+  }
+}
+
+.heading-secondary {
+  font-size: 20px;
+  font-weight: 600;
+
+  @include respond(small) {
+    font-size: 16px;
+  }
+}
+
+.text-primary {
+  padding-top: 20px;
+  font-size: 20px;
+  line-height: 160%;
+
+  @include respond(large) {
+    padding-top: 25px;
+    font-size: 18px;
+  }
+
+  @include respond(small) {
+    padding-top: 20px;
+    font-size: 16px;
+  }
+}
+
+.text-secondary {
+  padding-top: 20px;
+  font-size: 15px;
+  line-height: 140%;
+
+  @include respond(small) {
+    padding-top: 10px;
+    font-size: 13px;
+  }
+}
+
