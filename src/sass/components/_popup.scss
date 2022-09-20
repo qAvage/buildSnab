@@ -226,52 +226,52 @@
 
 // Choice popup
 
-.choice-popup {
-  position: relative;
-  background: $color-white;
-  padding: 50px 70px;
-  max-width: 645px;
-  margin: 20px auto;
-  text-align: center;
-  box-shadow: 6px 1px 35px rgba(0, 0, 0, 0.4);
-  border-radius: 25px;
-  z-index: 60;
+// .choice-popup {
+//   position: relative;
+//   background: $color-white;
+//   padding: 50px 70px;
+//   max-width: 645px;
+//   margin: 20px auto;
+//   text-align: center;
+//   box-shadow: 6px 1px 35px rgba(0, 0, 0, 0.4);
+//   border-radius: 25px;
+//   z-index: 60;
 
-  @include respond(small) {
-    padding: 25px;
-  }
+//   @include respond(small) {
+//     padding: 25px;
+//   }
 
-  .choice-btns {
-    display: flex;
-    justify-content: space-evenly;
+//   .choice-btns {
+//     display: flex;
+//     justify-content: space-evenly;
 
-    @include respond(small) {
-      flex-direction: column;
-      max-width: 250px;
-      margin: 0 auto;
-    }
+//     @include respond(small) {
+//       flex-direction: column;
+//       max-width: 250px;
+//       margin: 0 auto;
+//     }
 
-    .choice-btn {
-      display: block;
-      padding: 20px 50px;
-      color: $color-white;
-      background-color: $color-primary;
-      border: none;
-      border-radius: 7px;
-      transition: all 0.3s ease;
+//     .choice-btn {
+//       display: block;
+//       padding: 20px 50px;
+//       color: $color-white;
+//       background-color: $color-primary;
+//       border: none;
+//       border-radius: 7px;
+//       transition: all 0.3s ease;
 
-      &:first-child {
-        @include respond(small) {
-          margin-bottom: 15px;
-        }
-      }
+//       &:first-child {
+//         @include respond(small) {
+//           margin-bottom: 15px;
+//         }
+//       }
 
-      &:hover {
-        background-color: #DB7F36;
-      }
-    }
-  }
-}
+//       &:hover {
+//         background-color: #DB7F36;
+//       }
+//     }
+//   }
+// }
 
 
 // Util
