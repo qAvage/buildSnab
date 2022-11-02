@@ -243,32 +243,32 @@ $(document).ready(function() {
   });
 
     
-  setTimeout(() => {
-    $.magnificPopup.open({
-      items: {
-        src: '#choice-popup'
-      },
-      type: 'inline',
-      removalDelay: 300,
-      delegate: 'a',
-      mainClass: 'mfp-fade',
-      enableEscapeKey: false,
-      showCloseBtn: false,
-      callbacks: {
-        beforeOpen: function() {
-          $('body').addClass('mfp-active');
-        },
-        beforeClose: function() {
-          $('body').removeClass('mfp-active');
-        },
-        open: function() {
-          $('#choice-popup-stay').click(() => {
-            $.magnificPopup.close();
-          })
-        }
-      },
-    });
-  }, 2500);
+  // setTimeout(() => {
+  //   $.magnificPopup.open({
+  //     items: {
+  //       src: '#choice-popup'
+  //     },
+  //     type: 'inline',
+  //     removalDelay: 300,
+  //     delegate: 'a',
+  //     mainClass: 'mfp-fade',
+  //     enableEscapeKey: false,
+  //     showCloseBtn: false,
+  //     callbacks: {
+  //       beforeOpen: function() {
+  //         $('body').addClass('mfp-active');
+  //       },
+  //       beforeClose: function() {
+  //         $('body').removeClass('mfp-active');
+  //       },
+  //       open: function() {
+  //         $('#choice-popup-stay').click(() => {
+  //           $.magnificPopup.close();
+  //         })
+  //       }
+  //     },
+  //   });
+  // }, 2500);
 });
 
 
